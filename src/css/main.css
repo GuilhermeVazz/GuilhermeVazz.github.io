@@ -624,14 +624,13 @@ footer {
 
 }
 
-@media (max-width:390px) {
+@media (max-width:400px) {
     .h2-educacao {
-        margin: 30px 12px;
-        width: 81%;
+        width: 88.5%;
     }
 
     .materiais {
-        width: 90%;
-        margin: 0px -4px;
+        max-width: 100%;
+        padding: 10px;
     }
 }
