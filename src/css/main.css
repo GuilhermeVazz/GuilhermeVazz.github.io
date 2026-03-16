@@ -676,6 +676,12 @@ footer {
         display: block;
     }
 
+    .formSolicitarVisita {
+    padding-top: 130px;
+  
+}
+
+
 }
 
 @media (max-width:400px) {
