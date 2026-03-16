@@ -46,8 +46,11 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 20px 8%;
+    padding: 20px 0%;
     background: var(--white);
+    position: fixed;
+    width: 100vw;
+    z-index: 1000
 }
 
 .logo {
@@ -353,22 +356,29 @@ body {
 /* ================= MATERIAL EDUCATIVO ================= */
 
 .sessao-educativo {
-    padding: 30px 15%;
+    padding: 60px 15%;
     text-align: center;
 }
 
 .h2-educacao {
     border-radius: 30px;
-    letter-spacing: 4px;
-    background: black;
-    color: var(--primary-color);
+    border: 0.5px solid linear-gradient(180deg, #f5b400, #e6a600);
+    letter-spacing: 5px;
+    background: #f7f9fc;
+    color: black;
 
-    margin: 30px auto;
+    margin: 40px auto;
+    padding: 10px 0;
     width: 81%;
+
+    font-weight: 600;
+    font-size: 20px;
+
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
 }
 
 .material-educativo {
-    background: var(--primary-color);
+    background: linear-gradient(180deg, #f5b400, #e6a600);
 
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -376,7 +386,7 @@ body {
     grid-column-gap: 0px;
     flex: 1;
 
-
+    border-radius: 20px;
 }
 
 .container-educativo {
@@ -384,24 +394,61 @@ body {
     display: flex;
     justify-content: space-between;
 
-    padding: 30px 100px;
-    gap: 100px;
+    padding: 40px 80px;
+    gap: 60px;
 }
 
 .materiais {
-    height: 200px;
-    padding: 40px;
-    border-radius: 30px;
+    padding: 25px 40px;
+    border-radius: 25px;
+    border: 0.5px solid linear-gradient(180deg, #f5b400, #e6a600);
     flex: 1;
 
     background: var(--white);
     color: var(--text-dark);
 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+
+    /* transition: var(--transition); */
+}
+
+/* .materiais:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, 0.15);
+} */
+
+.materiais h3{
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.materiais span{
+    display: block;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 18px;
+    opacity: 0.9;
+}
+
+.materiais a{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+
+    padding: 8px 16px;
+    border-radius: 8px;
+
+    background: var(--primary-color);
+    color: black;
+
     transition: var(--transition);
 }
 
-.materiais:hover {
-    transform: translateY(-5px);
+.materiais a:hover{
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
 }
 
 /* ================= CONTATO COSNOSCO  ================= */
@@ -410,9 +457,10 @@ body {
     text-align: center;
 }
 
-.h1Contatoconosco{
-     margin-top: 30px;
+.h1Contatoconosco {
+    margin-top: 30px;
 }
+
 /* ================= FAQ ================= */
 
 .perguntas-frequentes {
@@ -452,6 +500,12 @@ body {
 
 .pergunta input:checked~.answer {
     display: block;
+}
+
+.formSolicitarVisita {
+    padding: 70px 15%;
+    padding-bottom: 0px;
+    height: 100vh;
 }
 
 /* ================= FOOTER ================= */
