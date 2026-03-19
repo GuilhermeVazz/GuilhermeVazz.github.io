@@ -1,0 +1,163 @@
+.header-modal {
+    display: none;
+}
+
+.container-acao {
+    padding: 50px 15%;
+    padding-bottom: 50px;
+}
+
+.noticia {
+    max-width: 100%;
+    margin: 40px auto;
+    padding: 0 20px;
+
+}
+
+h1 {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    margin-left: 12.5%;
+}
+
+.subtitulo {
+    font-size: 16px;
+    color: #444;
+    margin-bottom: 15px;
+    margin-left: 12.5%;
+}
+
+.autor {
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    margin-left: 12.5%;
+}
+
+.data {
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 20px;
+    margin-left: 12.5%;
+}
+
+.imagem-container {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    overflow: hidden;
+}
+
+.imagem-container img {
+    width: 75%;
+    margin-left: 12.5%;
+    /* height:500px; */
+
+}
+
+.legenda {
+    font-size: 12px;
+    color: #777;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 12.5%;
+}
+
+hr {
+    width: 75%;
+    margin-left: 12.5%;
+}
+
+.conteudoNoticia {
+    margin-top: 20px;
+    width: 75%;
+    margin-left: 12.5%;
+    ;
+}
+
+.grid-imagens {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    max-width: 800px;
+    margin: 40px auto;
+}
+
+.grid-imagens img {
+    width: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.grid-imagens img:hover {
+    transform: scale(1.03);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    padding-top: 150px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.modal-img {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 80%;
+    border-radius: 10px;
+}
+
+.fechar {
+    position: absolute;
+    top: 20px;
+    right: 40px;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+
+@media (max-width:760px) {
+    .container-acao {
+        padding: 100px 15%;
+        padding-bottom: 50px;
+    }
+
+    .conteudoNoticia {
+        padding: 15px 30px;
+    }
+}
+
+/* ================= RESPONSIVO CELULAR ================= */
+
+@media (max-width:430px) {
+    .container-acao {
+        padding: 100px 1%;
+        padding-bottom: 50px;
+    }
+
+    .conteudoNoticia {
+    margin-top: 5px;
+    width: 95%;
+    margin-left: 3.5%;
+   
+}
+
+.grid-imagens {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 15px;
+    max-width: 300px;
+    margin: 40px auto;
+}
+
+}

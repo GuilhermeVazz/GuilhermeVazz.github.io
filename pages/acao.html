@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edu!Trânsito</title>
+    <link rel="stylesheet" href="../src/css/main.css">
+    <link rel="stylesheet" href="../src/css/acoes.css">
+    <link rel="stylesheet" href="../src/css/acao.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">Edu!Trânsito</div>
+
+        <nav class="nav">
+            <a href="../index.html">Início</a>
+            <a href="acoes.html">Ações</a>
+
+            <div class="menu-jogos">
+                <a href="" class="link-jogos">
+                    Jogos <span class="seta">▼</span>
+                </a>
+
+                <div class="submenu">
+                    <a href="./jogos/quiz.html">Quiz</a>
+                    <a href="./jogos/memoria.html">Jogo da Memória</a>
+                </div>
+            </div>
+
+            <a href="#" class="verGestor">Gestor</a>
+        </nav>
+        <div class="auth-buttons">
+            <a href="#" class="acessoGestor">Gestor</a>
+        </div>
+    </header>
+    <section class="container-acao">
+        <div class="noticia">
+
+            <h1><strong>Ação Junto ao Detran-SP</strong></h1>
+
+            <p class="subtitulo">
+                Ação realizada no dia 19/03/2026 na Av. Francisco Rodrigues Filho junto ao Detran-SP.
+            </p>
+
+            <p class="autor">Guilherme Vaz</p>
+
+            <p class="data">
+                19/03/26 às 09:31
+            </p>
+
+            <div class="imagem-container">
+                <img src="../src/img/smmtEdetran.jpeg" alt="Refinaria">
+            </div>
+
+            <p class="legenda">
+                Funcionários da SMMT e DETRAN-SP distribuindo panfletos a motoroistas que passavam pelo local.
+            </p>
+            <hr>
+
+            <p class="conteudoNoticia">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots
+                in a piece of
+                classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin
+                professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words,
+                consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical
+                literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of
+                "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book
+                is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem
+                Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.<br><br>
+
+                The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested.
+                Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their
+                exact original form, accompanied by English versions from the 1914 translation by H. Rackham.<br><br>
+
+                <strong>Where can I get some?</strong><br><br>
+                There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                alteration in some form, by injected humour, or randomised words which don't look even slightly
+                believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
+                embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat
+                predefined chunks as necessary, making this the first true generator on the Internet. It uses a
+                dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate
+                Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition,
+                injected humour, or non-characteristic words etc.
+                <br><br>
+                5
+                paragraphs<br>
+                words<br>
+                bytes<br>
+                lists<br>
+                Start with 'Lorem<br>
+                ipsum dolor sit amet...'<br>
+            </p>
+        </div>
+
+        <div class="grid-imagens">
+
+            <img src="../src/img/smmtEdetran.jpeg" alt="Imagem 1">
+            <img src="../src/img/smmtEdetran.jpeg" alt="Imagem 2">
+            <img src="../src/img/smmtEdetran.jpeg" alt="Imagem 3">
+            <img src="../src/img/smmtEdetran.jpeg" alt="Imagem 4">
+
+        </div>
+
+        <!-- Modal -->
+        <div class="modal" id="modal">
+            <span class="fechar">&times;</span>
+            <img class="modal-img" id="imgExpandida">
+        </div>
+
+    </section>
+    <footer>
+        <span>Departamento de Inteligência de Dados <br> Secretaria de Mobilidade e Trânsito</span>
+        <img class="img-footer" src="../src/img/brasaoColorido.png" alt="logo prefeitura de mogi das cruzes">
+    </footer>
+
+    <script>
+        const imagens = document.querySelectorAll(".grid-imagens img");
+        const modal = document.getElementById("modal");
+        const modalImg = document.getElementById("imgExpandida");
+        const fechar = document.querySelector(".fechar");
+        const menu = document.querySelector(".header")
+
+        imagens.forEach(img => {
+            img.addEventListener("click", () => {
+                modal.style.display = "block";
+                modalImg.src = img.src;
+                menu.style.display = "none";
+            });
+        });
+
+        fechar.onclick = () => {
+            modal.style.display = "none";
+            menu.style.display = "flex";
+        };
+
+        modal.onclick = () => {
+            modal.style.display = "none";
+            menu.style.display = "flex";
+        };
+    </script>
+</body>
