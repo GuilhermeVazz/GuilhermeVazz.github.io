@@ -217,7 +217,7 @@ transform:translateX(0);
 @media (max-width:480px){
 
 .main-acoes{
-    padding:40px 6%;
+    padding-top: 150px;
 }
 
 .main-text h1{
